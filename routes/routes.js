@@ -4,7 +4,7 @@ var Instagram = require('instagram-node-lib'),
 
 Instagram.set('client_id', config.secrets.clientId);
 Instagram.set('client_secret', config.secrets.clientSecret);
-Instagram.set('redirect_uri', 'http://localhost:5000/auth/instagram/callback');
+Instagram.set('redirect_uri', 'http://stalkergram.herokuapp.com/auth/instagram/callback');
 
 module.exports = function (app) {
 	

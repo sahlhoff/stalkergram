@@ -13,7 +13,7 @@ body {
 	font-size: 30px;
 	text-align: center;
 	color: #ffffff;
-	padding:10px;
+	padding:20px;
 }
 
 .landing {
@@ -46,7 +46,7 @@ a {
 
 .bnav {
 	top:0;
-	height: 70px;
+	height: 90px;
 	background-color: #02a9d6;
 }
 

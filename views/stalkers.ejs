@@ -15,7 +15,7 @@
 	<table class="table">
               <tbody>
                 <tr ng-repeat="stalker in stalkers">
-        		      <td><img src="stalker.profile_picture"></td>
+        		      <td><img ng-src="stalker.profile_picture"></td>
                   <td ng-bind-html-unsafe="stalker.username"></td>
                   <td ng-bind-html-unsafe="stalker.likes"></td>
                   <td ng-bind-html-unsafe="stalker.comments"></td>

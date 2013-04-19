@@ -10,19 +10,19 @@
   </head>
   <body class="stalkerPage">
     <div class="bnav">
-  	 <div class="logo">Your Instagram Stalkers</div>
+  	 <div class="logo">YOUR INSTAGRAM STALKERS</div>
     </div>
   	<div ng-controller="StalkerCtrl">
     	<div ng-view></div>
-    	<div class="row">
-        <div class="span8 offset3">
+    	<div class="row extraPadding">
+        <div class="span8 offset3 stalkerContainer">
           <table class="table">
             <tbody>
               <tr ng-repeat="stalker in stalkers">
         	      <td><img ng-src="{{stalker.profile_picture}}" heigth="50" width="50" class="img-rounded"></td>
                 <td ng-bind-html-unsafe="stalker.username"></td>
                 <td ng-bind-html-unsafe="stalker.likes"></td>
-                <td ng-bind-html-unsafe="stalker.comments"></td>
+                <td ng-bind-html-unsafe="stalker.comments"><i class="icon-comment"></i></td>
               </tr>
             </tbody>
           </table>

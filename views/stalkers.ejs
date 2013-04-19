@@ -8,20 +8,26 @@
     <script src="/javascripts/angular-ui.js"></script>
     <script src="/javascripts/angularApp.js"></script>
   </head>
-  <body>
-  	<h1 class="logo">Your Instagram Stalkers</h1>
+  <body class="stalkerPage">
+    <div class="bnav">
+  	 <div class="logo">Your Instagram Stalkers</div>
+    </div>
   	<div ng-controller="StalkerCtrl">
-	<div ng-view></div>
-	<table class="table">
-              <tbody>
-                <tr ng-repeat="stalker in stalkers">
-        		      <td><img ng-src="stalker.profile_picture"></td>
-                  <td ng-bind-html-unsafe="stalker.username"></td>
-                  <td ng-bind-html-unsafe="stalker.likes"></td>
-                  <td ng-bind-html-unsafe="stalker.comments"></td>
-                </tr>
-              </tbody>
-            </table>
+    	<div ng-view></div>
+    	<div class="row">
+        <div class="span8 offset3">
+          <table class="table">
+            <tbody>
+              <tr ng-repeat="stalker in stalkers">
+        	      <td><img ng-src="{{stalker.profile_picture}}" heigth="50" width="50" class="img-rounded"></td>
+                <td ng-bind-html-unsafe="stalker.username"></td>
+                <td ng-bind-html-unsafe="stalker.likes"></td>
+                <td ng-bind-html-unsafe="stalker.comments"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>

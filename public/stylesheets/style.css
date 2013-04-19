@@ -1,16 +1,38 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #02a9d6;
-  color: #ffffff;
+  
+}
+
+.indexPage {
+	background-color: #02a9d6;
+	color: #ffffff;
+	text-align: center;
 }
 
 .logo {
 	font-size: 50px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.landing {
+	padding-top: 200px;
+}
+
+.landingStalker {
+	font-size: 100px;
+	padding-bottom: 30px;
+	font-family: 'Satisfy', cursive;
+}
+
+.littleStalker {
+	padding-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a {
   color: #00B7FF;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .stalkers {
@@ -19,4 +41,14 @@ a {
 
 .list {
 	list-style: none;
+}
+
+.bnav {
+	top:0;
+	height: 70px;
+	background-color: #02a9d6;
+}
+
+.stalkerPage {
+	background-color: #e8e8e8;
 }

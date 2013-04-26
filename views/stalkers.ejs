@@ -26,7 +26,7 @@
               <td><a href="" ng-click="predicate = 'comments'; reverse=!reverse">Comments</a></td>
             </tr>
               <tr ng-repeat="stalker in stalkers | orderBy:predicate:reverse">
-        	      <td><img ng-src="{{stalker.profile_picture}}" heigth="50" width="50" class="img-rounded"></td>
+        	      <td><a href="http://instagram.com/{{stalker.username}}" target="_blank"><img ng-src="{{stalker.profile_picture}}" heigth="50" width="50" class="img-rounded"></a></td>
                 <td ng-bind-html-unsafe="stalker.username"></td>
                 <td ng-bind-html-unsafe="stalker.likes"></td>
                 <td ng-bind-html-unsafe="stalker.comments"><i class="icon-comment"></i></td>

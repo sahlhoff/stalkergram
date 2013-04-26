@@ -18,7 +18,14 @@
         <div class="span8 offset3 stalkerContainer">
           <table class="table">
             <tbody>
-              <tr ng-repeat="stalker in stalkers | filter: likes">
+            <tr>
+              <td></td>
+              <td><a href="" ng-click="predicate = 'username'; reverse=false">Name</a>
+                  (<a href ng-click="predicate = '-username'; reverse=false">^</a>)</td>
+              <td><a href="" ng-click="predicate = 'likes'; reverse=!reverse">Likes</a></td>
+              <td><a href="" ng-click="predicate = 'comments'; reverse=!reverse">Comments</a></td>
+            </tr>
+              <tr ng-repeat="stalker in stalkers | orderBy:predicate:reverse">
         	      <td><img ng-src="{{stalker.profile_picture}}" heigth="50" width="50" class="img-rounded"></td>
                 <td ng-bind-html-unsafe="stalker.username"></td>
                 <td ng-bind-html-unsafe="stalker.likes"></td>

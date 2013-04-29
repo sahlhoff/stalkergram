@@ -40,23 +40,25 @@ module.exports = function (app) {
 		    		var like = data[i].likes.data
 		    		var comment = data[i].comments.data
 		    		for(var j = 0; j<like.length; j++){
-		    			var username = like[j].username
+		    			var username = like[j].username;
+		    			var fullname = like[j].full_name;
 		    			if(containsObject(username, users, 'likes')){
 		    			} else {
-		    				var profile_picture = like[j].profile_picture
-		    				var id = like[j].id
-		    				var user = {'username': username, 'likes':1, 'comments':0, 'profile_picture': profile_picture, 'id': id}
-		    				users.push(user)
+		    				var profile_picture = like[j].profile_picture;
+		    				var id = like[j].id;
+		    				var user = {'username': username, 'full_name': fullname, 'likes':1, 'comments':0, 'profile_picture': profile_picture, 'id': id};
+		    				users.push(user);
 		    			}
 		    		}
 		    		for(var k = 0; k<comment.length; k++){
-		    			var username = comment[k].from.username
+		    			var username = comment[k].from.username;
+		    			var fullname = comment[k].from.full_name;
 		    			if(containsObject(username, users, 'comments')){
 		    			} else {
-		    				var profile_picture = comment[k].from.profile_picture
-		    				var id = comment[k].from.id
-		    				var user = {'username': username, 'likes':0, 'comments':1, 'profile_picture': profile_picture, 'id': id}
-		    				users.push(user)
+		    				var profile_picture = comment[k].from.profile_picture;
+		    				var id = comment[k].from.id;
+		    				var user = {'username': username, 'likes':0, 'full_name': fullname, 'comments':1, 'profile_picture': profile_picture, 'id': id};
+		    				users.push(user);
 		    			}
 		    		}
 				}

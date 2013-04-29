@@ -56,7 +56,7 @@ a {
 
 .stalkerContainer {
 	background-color: #ffffff;
-	padding:30px;
+	padding:10px;
 	-moz-box-shadow:    3px 3px 5px 6px #ccc;
 	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
 	box-shadow:         3px 3px 5px 6px #ccc;
@@ -65,3 +65,52 @@ a {
 .extraPadding {
 	padding: 30px;
 }
+
+.icon-gray {
+  opacity: 0.3;
+}
+
+.holder {
+	background-color: #f6f6f6;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	width:90px;
+	height:40px;
+	margin: 0 auto;
+	padding:10px;
+}
+
+.likes {
+	float:left;
+	text-align:center;
+	width:50%;
+	display:inline-block;
+}
+
+.comments {
+	width:50%;
+	text-align: center;
+	border-left: 2px solid #e8e8e8;
+	margin-left: 45px;
+	padding-left: 5px;
+}
+
+.upperCase {
+	text-transform: uppercase;
+}
+
+.stalkerImage {
+	border: 1px solid #e8e8e8;
+}
+
+.name {
+	padding-top:20px !important;
+}
+
+.circle {
+	padding-top: 10px;
+}
+
+.table tr:first-child td{ 
+     border-top: none; 
+ }

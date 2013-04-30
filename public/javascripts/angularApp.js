@@ -15,7 +15,18 @@ function StalkerCtrl($scope, $route, $routeParams, $location, $http) {
   $scope.stalkers = [];
   $http({method: 'GET', url: '/mystalkers'}).
     success(function(data, status, headers, config) {
-      console.log(data.users)
+      
+    setTimeout(function(){  
+        $("tr").foggy({
+         blurRadius: 9,          // In pixels.
+         opacity: 0.8,           // Falls back to a filter for IE.
+         cssFilterSupport: true  // Use "-webkit-filter" where available.
+        }); 
+          $("tr:first").foggy(false)
+          $('tr:eq(1)').foggy(false)
+        },10);
+
+
       $scope.stalkers = data.users;
     });
 }

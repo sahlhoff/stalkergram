@@ -22,6 +22,8 @@ passport.deserializeUser(function(obj, done) {
 });
 
 
+
+
 passport.use(new InstagramStrategy({
     clientID: INSTAGRAM_CLIENT_ID,
     clientSecret: INSTAGRAM_CLIENT_SECRET,
@@ -68,7 +70,6 @@ app.configure('development', function(){
 app.configure('production', function(){
     app.use(express.errorHandler());
 });
-
 
 
 require('./routes/routes')(app)

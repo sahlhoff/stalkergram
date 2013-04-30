@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
     <script src="/javascripts/angular-ui.js"></script>
     <script src="/javascripts/angularApp.js"></script>
+    <script src="/javascripts/jquery.foggy.min.js"></script>
   </head>
   <body class="stalkerPage">
     <div class="bnav">
@@ -18,7 +19,7 @@
         <div class="span8 offset3 stalkerContainer">
           <table class="table">
             <tbody>
-              <tr ng-repeat="stalker in stalkers | orderBy:'likes':true">
+              <tr ng-repeat="stalker in stalkers | orderBy:'likes':true" class="faded">
         	      <td><img ng-src="{{stalker.profile_picture}}" height="65" width="65" class="img-rounded stalkerImage"></td>
                 <td class="name">
                   <span class="upperCase">{{stalker.username}}</span>
@@ -53,6 +54,22 @@
 
   ga('create', 'UA-40393186-1', 'herokuapp.com');
   ga('send', 'pageview');
+
+  $(document).ready( function(){
+
+
+/*
+    $("tr").foggy({
+       blurRadius: 9,          // In pixels.
+       opacity: 0.8,           // Falls back to a filter for IE.
+       cssFilterSupport: true  // Use "-webkit-filter" where available.
+     }); 
+
+
+//    $("tr:first").foggy(false)
+
+
+  });
 
 </script>
 </html>

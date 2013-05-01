@@ -114,3 +114,7 @@ a {
 .table tr:first-child td{ 
      border-top: none; 
  }
+
+.modal.fade.in {
+	top: 30%;
+}

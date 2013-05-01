@@ -24,6 +24,12 @@ function StalkerCtrl($scope, $route, $routeParams, $location, $http) {
         }); 
           $("tr:first").foggy(false)
           $('tr:eq(1)').foggy(false)
+
+          $('#myModal').modal({
+            keyboard: false,
+            backdrop: false
+          })
+
         },10);
 
 

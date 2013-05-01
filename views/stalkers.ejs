@@ -63,6 +63,7 @@
               twttr.ready(function (twttr) {
                 twttr.events.bind('follow',   function(e) {
                    $("tr").foggy(false)
+                   $(".close").click()
                 });
               });
               </script>
@@ -97,9 +98,6 @@
   return false;
   }
 
-  $("#follow-button").click(function () {
-    console.log('yo!')
-  })
 
 
 </script>

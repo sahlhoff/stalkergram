@@ -22,12 +22,6 @@ function StalkerCtrl($scope, $route, $routeParams, $location, $http) {
           $('tr:eq(2)').foggy({blurRadius:9, opacity:0.8, cssFilterSupport:true})
 
           $('#tweetTo').show();
-          /*
-          $('#myModal').modal({
-            keyboard: false,
-            backdrop: false
-          })
-          */
         },10);
 
 

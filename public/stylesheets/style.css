@@ -118,3 +118,31 @@ a {
 .modal.fade.in {
 	top: 30%;
 }
+
+#tweetTo {
+	left: 50%;
+	font-size: 25px;
+	background-color: #00aced;
+	color: #ffffff;
+	text-align: center;
+	z-index: 1000;
+	top: 210px;
+	position: absolute;
+	display:none;
+	border-radius: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: -190px;
+}
+
+.tweetImg {
+	padding-right: 20px;
+}
+
+#tweetTo a {
+	font-family: sans-serif;
+	font-weight: lighter;
+	color:#fff;
+	text-decoration: none;
+	padding:20px 30px 20px 30px;
+}

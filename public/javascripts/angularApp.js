@@ -17,19 +17,17 @@ function StalkerCtrl($scope, $route, $routeParams, $location, $http) {
     success(function(data, status, headers, config) {
       
     setTimeout(function(){  
-        $("tr").foggy({
-         blurRadius: 9,          // In pixels.
-         opacity: 0.8,           // Falls back to a filter for IE.
-         cssFilterSupport: true  // Use "-webkit-filter" where available.
-        }); 
-          $("tr:first").foggy(false)
-          $('tr:eq(1)').foggy(false)
+          $("tr:first").foggy({blurRadius:9, opacity:0.8, cssFilterSupport:true})
+          $('tr:eq(1)').foggy({blurRadius:9, opacity:0.8, cssFilterSupport:true})
+          $('tr:eq(2)').foggy({blurRadius:9, opacity:0.8, cssFilterSupport:true})
 
+          $('#tweetTo').show();
+          /*
           $('#myModal').modal({
             keyboard: false,
             backdrop: false
           })
-
+          */
         },10);
 
 

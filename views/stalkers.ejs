@@ -21,7 +21,7 @@
         <div class="span8 offset3 stalkerContainer">
           <table class="table">
             <tbody>
-              <tr ng-repeat="stalker in stalkers | orderBy:'likes':true" class="faded">
+              <tr ng-repeat="stalker in stalkers | orderBy:'likes':true | limitTo:10" class="faded">
         	      <td><img ng-src="{{stalker.profile_picture}}" height="65" width="65" class="img-rounded stalkerImage"></td>
                 <td class="name">
                   <span class="upperCase">{{stalker.username}}</span>
@@ -44,34 +44,8 @@
               </tr>
             </tbody>
           </table>
-          <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="myModalLabel">Follow us on Twitter to unlock</h3>
-            </div>
-            <div class="modal-body">
-             <a href=http://twitter.com/Stalkergram class="twitter-follow-button"
-              data-show-count="true">Follow@Stalkergram</a>
-              <script type="text/javascript" charset="utf-8">
-                window.twttr = (function (d,s,id) {
-                  var t, js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-                  js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-                  return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-                }(document, "script", "twitter-wjs"));
-              </script>
-              <script>
-              twttr.ready(function (twttr) {
-                twttr.events.bind('follow',   function(e) {
-                   $("tr").foggy(false)
-                   $(".close").click()
-                });
-              });
-              </script>
-            </div>
-            <div class="modal-footer">
-              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
+          <div id="tweetTo">
+            <a href="https://twitter.com/intent/tweet?text=Want+to+find+your+Instagram+stalkers?+Check+out+http://stalkergram.com" id="lola" target="_blank"><img class="tweetImg" src="/img/bird.png">TWEET TO SHOW ALL</a> 
           </div>
         </div>
       </div>
@@ -87,18 +61,14 @@
   ga('send', 'pageview');
 
 
-  function popup(mylink, windowname){
-    console.log(' in popup')
-  if (! window.focus)return true;
-  var href;
-  if (typeof(mylink) == 'string')
-     href=mylink;
-  else
-     href=mylink.href;
-  window.open(href, windowname, 'width=550,height=420,scrollbars=yes');
-  return false;
-  }
-
+$(document).ready(function(){   
+  $("#lola").on("click", function(){
+      window.open($("#lola").attr("href"));
+      $("tr").foggy(false);
+      $("#tweetTo").hide();
+      return false;
+  });
+});
 
 
 </script>

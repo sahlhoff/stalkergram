@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" ng-app="ngView">
   <head>
-    <title>Your Stalkers</title>
+    <title>Stalkergram</title>
   	<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
   	<link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -22,7 +22,8 @@
           <table class="table">
             <tbody>
               <tr ng-repeat="stalker in stalkers | orderBy:'likes':true | limitTo:10" class="faded">
-        	      <td><img ng-src="{{stalker.profile_picture}}" height="65" width="65" class="img-rounded stalkerImage"></td>
+        	      <td><div class="counter">{{$index}}</div></td>
+                <td><img ng-src="{{stalker.profile_picture}}" height="65" width="65" class="img-rounded stalkerImage"></td>
                 <td class="name">
                   <span class="upperCase">{{stalker.username}}</span>
                   <br>
@@ -45,7 +46,7 @@
             </tbody>
           </table>
           <div id="tweetTo">
-            <a href="https://twitter.com/intent/tweet?text=Want+to+find+your+Instagram+stalkers?+Check+out+http://stalkergram.com" id="lola" target="_blank"><img class="tweetImg" src="/img/bird.png">TWEET TO SHOW ALL</a> 
+            <a href="https://twitter.com/intent/tweet?text=Want+to+find+your+Instagram+stalkers?+Check+out+http://stalkergram.com" id="lola" target="_blank"><img class="tweetImg" src="/img/bird.png">TWEET TO SHOW YOUR TOP 3 STALKERS</a> 
           </div>
         </div>
       </div>

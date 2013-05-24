@@ -121,7 +121,7 @@ a {
 
 #tweetTo {
 	left: 50%;
-	font-size: 25px;
+	font-size: 20px;
 	background-color: #00aced;
 	color: #ffffff;
 	text-align: center;
@@ -145,4 +145,8 @@ a {
 	color:#fff;
 	text-decoration: none;
 	padding:20px 30px 20px 30px;
+}
+
+.counter {
+	padding-top: 25px;
 }

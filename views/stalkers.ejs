@@ -22,7 +22,7 @@
           <table class="table">
             <tbody>
               <tr ng-repeat="stalker in stalkers | orderBy:'likes':true | limitTo:10" class="faded">
-        	      <td><div class="counter">{{$index}}</div></td>
+        	      <td><div class="counter">{{$index + 1}}</div></td>
                 <td><img ng-src="{{stalker.profile_picture}}" height="65" width="65" class="img-rounded stalkerImage"></td>
                 <td class="name">
                   <span class="upperCase">{{stalker.username}}</span>

@@ -15,10 +15,13 @@
     <div class="bnav">
   	<div class="logo">YOUR INSTAGRAM STALKERS</div>
     </div>
+    <div id="tweetTo">
+            <a href="https://twitter.com/intent/tweet?text=Want+to+find+your+Instagram+stalkers?+Check+out+http://stalkergram.com" id="lola" target="_blank"><img class="tweetImg" src="/img/bird.png">TWEET TO SHOW YOUR TOP 3 STALKERS</a> 
+    </div>
   	<div ng-controller="StalkerCtrl">
     	<div ng-view></div>
-    	<div class="row extraPadding">
-        <div class="span8 offset4 stalkerContainer">
+    	<div class="extraPadding">
+        <div class="stalkerContainer">
           <table class="table">
             <tbody>
               <tr ng-repeat="stalker in stalkers | orderBy:'likes':true | limitTo:10" class="faded">
@@ -45,11 +48,11 @@
               </tr>
             </tbody>
           </table>
-          <div id="tweetTo">
-            <a href="https://twitter.com/intent/tweet?text=Want+to+find+your+Instagram+stalkers?+Check+out+http://stalkergram.com" id="lola" target="_blank"><img class="tweetImg" src="/img/bird.png">TWEET TO SHOW YOUR TOP 3 STALKERS</a> 
-          </div>
         </div>
       </div>
+    </div>
+    <div class="footer">
+      Created by <a href="http://instagram.com/jculbertson">jculbertson</a> and <a href="http://instagram.com/sahlhoff">sahlhoff</a>
     </div>
   </body>
   <script>

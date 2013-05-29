@@ -159,6 +159,7 @@ a {
 	margin-bottom: 50px;
 }
 
-.socialheader a {
-    float: none !important;
+.addthis_toolbox {
+	width: 242px;
+	margin: 0 auto;
 }

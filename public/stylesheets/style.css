@@ -164,7 +164,7 @@ a {
 	margin: 0 auto;
 }
 
-@media (max-width:480px) {
+@media (max-width:500px) {
 	.landingStalker {
 		font-size: 110px;
 	}

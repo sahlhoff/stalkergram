@@ -164,8 +164,8 @@ a {
 	margin: 0 auto;
 }
 
-@media (min-width:320px) { .landingStalker{} .littleStalker{font-size: 29px;} }
-@media (min-width:481px) { .landingStalker{} .littleStalker{font-size: 29px;} }
+@media (min-width:320px) { .landingStalker{font-size: 60px;} .littleStalker{} }
+@media (min-width:481px) { .landingStalker{font-size: 120px;} .littleStalker{font-size: 30px;} }
 @media (min-width:641px) { .landingStalker{} .littleStalker{} }
 @media (min-width:961px) { .landingStalker{} .littleStalker{}
 @media (min-width:1025px) { .landingStalker{} .littleStalker{} }

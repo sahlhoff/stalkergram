@@ -165,10 +165,5 @@ a {
 }
 
 @media (max-width:500px) {
-	.landingStalker {
-		font-size: 110px;
-	}
-	.littleStalker {
-		font-size: 40px;
-	}
+
 }

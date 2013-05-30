@@ -164,6 +164,9 @@ a {
 	margin: 0 auto;
 }
 
-@media (max-width:500px) {
-
-}
+@media (min-width:320px) { .landingStalker{} .littleStalker{font-size: medium;} }
+@media (min-width:481px) { .landingStalker{} .littleStalker{font-size: 29px;} }
+@media (min-width:641px) { .landingStalker{} .littleStalker{} }
+@media (min-width:961px) { .landingStalker{} .littleStalker{}
+@media (min-width:1025px) { .landingStalker{} .littleStalker{} }
+@media (min-width:1281px) { .landingStalker{} .littleStalker{} }
